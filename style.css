@@ -1,14 +1,55 @@
+/* GLOBAL -------------------------------------------------- */
+
+:root {
+  --bg: #0d1117;
+  --bg-light: #161b22;
+  --text: #e6edf3;
+  --muted: #9ca3af;
+  --accent: #58a6ff;
+  --border: #30363d;
+  --radius: 10px;
+}
+
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  background: #0d1117;
-  color: #e6edf3;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.section {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.section p {
+  color: var(--muted);
+}
+
+/* HERO -------------------------------------------------- */
 
 .hero {
   text-align: center;
-  padding: 4rem 1rem;
-  background: #161b22;
+  padding: 4rem 1rem 3rem;
+  background: var(--bg-light);
+  border-bottom: 1px solid var(--border);
 }
 
 .hero h1 {
@@ -16,54 +57,83 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.hero nav {
-  margin-top: 1.5rem;
+.hero p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
 }
 
 .hero nav a {
   margin: 0 0.75rem;
-  color: #58a6ff;
-  text-decoration: none;
   font-weight: 500;
 }
 
-.section {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 0 1rem;
-}
-
-.section h2 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-}
+/* GRID + CARDS -------------------------------------------------- */
 
 .grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 1.5rem;
 }
 
 .card {
-  background: #161b22;
-  padding: 1.25rem;
-  border-radius: 8px;
-  border: 1px solid #30363d;
+  background: var(--bg-light);
+  padding: 1.4rem 1.6rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
 }
 
 .card h3 {
   margin-top: 0;
+  margin-bottom: 0.6rem;
 }
 
-.card a {
-  color: #58a6ff;
-  text-decoration: none;
+.card p {
+  margin: 0.4rem 0 0.8rem;
+  color: var(--muted);
 }
+
+.card strong {
+  color: var(--accent);
+}
+
+/* SKILLS -------------------------------------------------- */
+
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.skills-list li::before {
+  content: "• ";
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* FOOTER -------------------------------------------------- */
 
 footer {
   text-align: center;
   padding: 2rem 0;
   margin-top: 3rem;
-  border-top: 1px solid #30363d;
-  color: #8b949e;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/* RESPONSIVE -------------------------------------------------- */
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
 }
