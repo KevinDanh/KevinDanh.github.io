@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kevin Danh | Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="hero">
+    <h1>Kevin Danh</h1>
+    <p>Developer • Builder • Problem Solver</p>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/KevinDanh" target="_blank">GitHub</a>
+    </nav>
+  </header>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Project One</h3>
+        <p>A short description of what this project does and why it matters.</p>
+        <a href="https://github.com/KevinDanh" target="_blank">View Repo</a>
+      </div>
+
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>Another project you want to highlight. Replace this with your own.</p>
+        <a href="https://github.com/KevinDanh" target="_blank">View Repo</a>
+      </div>
+
+      <div class="card">
+        <h3>Project Three</h3>
+        <p>Something fun, experimental, or in progress.</p>
+        <a href="https://github.com/KevinDanh" target="_blank">View Repo</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I'm a developer who enjoys building clean, useful, and creative software.
+      I like exploring new technologies, improving my skills, and shipping projects
+      that actually get used.
+    </p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>
+      The best way to reach me is through GitHub:
+      <a href="https://github.com/KevinDanh" target="_blank">@KevinDanh</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> Kevin Danh</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
